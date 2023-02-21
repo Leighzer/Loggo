@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Loggo": {
+      "commandName": "Project",
+      "commandLineArgs": "test abc"
+    }
+  }
+}
