@@ -24,13 +24,14 @@ namespace Loggo
                 // ensure there is a log directory to write files to
                 Directory.CreateDirectory($"{s_appDir}/logs");
 
-                string path = $"{s_appDir}/logs/{todayString}.txt";
+                string fileName = $"{todayString}.txt";
+                string path = $"{s_appDir}/logs/{fileName}";
                 using (StreamWriter sw = File.AppendText(path))
                 {
                     sw.WriteLine(logLine);
                 }
 
-                Console.WriteLine($"Log line successfully added to {todayString}.txt");
+                Console.WriteLine($"Log line successfully added to {fileName}");
             }
             catch (Exception e)
             {
